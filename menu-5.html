@@ -25,11 +25,10 @@
 	============================================= -->
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/plugins.js"></script>
-	<script type="text/javascript" src="js/canvas.slider.fade.js"></script>
 
 	<!-- Document Title
 	============================================= -->
-	<title>Canvas Slider Fade | Canvas</title>
+	<title>Menu - Style 5 | Canvas</title>
 
 </head>
 
@@ -41,7 +40,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="full-header transparent-header" data-sticky-class="not-dark">
+		<header id="header" class="full-header">
 
 			<div id="header-wrap">
 
@@ -58,10 +57,10 @@
 
 					<!-- Primary Navigation
 					============================================= -->
-					<nav id="primary-menu" class="dark">
+					<nav id="primary-menu" class="style-5">
 
 						<ul>
-							<li><a href="index.html"><div>Home</div></a>
+							<li><a href="index.html"><div><i class="icon-home2"></i>Home</div></a>
 								<ul>
 									<li><a href="index-corporate.html"><div>Home - Corporate</div></a>
 										<ul>
@@ -129,7 +128,7 @@
 									<li><a href="index-app-showcase.html"><div>Home - App Showcase</div></a></li>
 								</ul>
 							</li>
-							<li class="current"><a href="#"><div>Features</div></a>
+							<li class="current"><a href="#"><div><i class="icon-beaker"></i>Features</div></a>
 								<ul>
 									<li><a href="#"><div><i class="icon-stack"></i>Sliders</div></a>
 										<ul>
@@ -344,7 +343,7 @@
 									<li><a href="#"><div><i class="icon-adjust"></i>Dark Version</div></a></li>
 								</ul>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Pages</div></a>
+							<li class="mega-menu"><a href="#"><div><i class="icon-file-alt"></i>Pages</div></a>
 								<div class="mega-menu-content style-2 col-4 clearfix">
 									<ul>
 										<li class="mega-menu-title"><a href="#"><div>Introduction</div></a>
@@ -404,7 +403,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Portfolio</div></a>
+							<li class="mega-menu"><a href="#"><div><i class="icon-briefcase"></i>Portfolio</div></a>
 								<div class="mega-menu-content style-2 col-5 clearfix">
 									<ul>
 										<li class="mega-menu-title"><a href="#"><div>Grids</div></a>
@@ -468,7 +467,7 @@
 									</ul>
 								</div>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Blog</div></a>
+							<li class="mega-menu"><a href="#"><div><i class="icon-pencil2"></i>Blog</div></a>
 								<div class="mega-menu-content style-2 col-4 clearfix">
 									<ul>
 										<li class="mega-menu-title"><a href="#"><div>Default</div></a>
@@ -540,7 +539,7 @@
 									</ul>
 								</div>
 							</li>
-							<li><a href="shop.html"><div>Shop</div></a>
+							<li><a href="shop.html"><div><i class="icon-bag"></i>Shop</div></a>
 								<ul>
 									<li><a href="shop.html"><div>4 Columns</div></a></li>
 									<li><a href="shop-3.html"><div>3 Columns</div></a>
@@ -578,7 +577,7 @@
 									<li><a href="checkout.html"><div>Checkout</div></a></li>
 								</ul>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
+							<li class="mega-menu"><a href="#"><div><i class="icon-code"></i>Shortcodes</div></a>
 								<div class="mega-menu-content col-5 clearfix">
 									<ul>
 										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
@@ -703,9 +702,9 @@
 							</div>
 						</div>
 						<div class="video-wrap">
-							<video id="slide-video" poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
-								<source src='images/videos/explore.webm' type='video/webm' />
+							<video poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
 								<source src='images/videos/explore.mp4' type='video/mp4' />
+								<source src='images/videos/explore.webm' type='video/webm' />
 							</video>
 							<div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
 						</div>
@@ -721,6 +720,7 @@
 				</div>
 				<div id="slider-arrow-left"><i class="icon-angle-left"></i></div>
 				<div id="slider-arrow-right"><i class="icon-angle-right"></i></div>
+				<div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
 			</div>
 
 			<script>
@@ -729,29 +729,6 @@
 						paginationClickable: false,
 						slidesPerView: 1,
 						grabCursor: true,
-						loop: true,
-						speed: 1000,
-						progress: true,
-						onProgressChange: function(swiper){
-							for (var i = 0; i < swiper.slides.length; i++){
-								var slide = swiper.slides[i];
-								var progress = slide.progress;
-								var translate = progress*swiper.width;
-								var opacity = 1 - Math.min(Math.abs(progress),1);
-								slide.style.opacity = opacity;
-								swiper.setTransform(slide,'translate3d('+translate+'px,0,0)');
-							}
-						},
-						onTouchStart:function(swiper){
-							for (var i = 0; i < swiper.slides.length; i++){
-								swiper.setTransition(swiper.slides[i], 0);
-							}
-						},
-						onSetWrapperTransition: function(swiper, speed) {
-							for (var i = 0; i < swiper.slides.length; i++){
-								swiper.setTransition(swiper.slides[i], speed);
-							}
-						},
 						onSwiperCreated: function(swiper){
 							$('[data-caption-animate]').each(function(){
 								var $toAnimateElement = $(this);
@@ -766,31 +743,25 @@
 									}, toAnimateDelayTime);
 								}
 							});
-							SEMICOLON.slider.swiperSliderMenu();
 						},
 						onSlideChangeStart: function(swiper){
+							$('#slide-number-current').html(swiper.activeIndex + 1);
 							$('[data-caption-animate]').each(function(){
 								var $toAnimateElement = $(this);
 								var elementAnimation = $toAnimateElement.attr('data-caption-animate');
 								$toAnimateElement.removeClass('animated').removeClass(elementAnimation).addClass('not-animated');
 							});
-							SEMICOLON.slider.swiperSliderMenu();
 						},
 						onSlideChangeEnd: function(swiper){
-							$('#slider').find('.swiper-slide').each(function(){
+							$('#slider .swiper-slide').each(function(){
 								if($(this).find('video').length > 0) { $(this).find('video').get(0).pause(); }
-								if($(this).find('.yt-bg-player').length > 0) { $(this).find('.yt-bg-player').pauseYTP(); }
 							});
-							$('#slider').find('.swiper-slide:not(".swiper-slide-active")').each(function(){
+							$('#slider .swiper-slide:not(".swiper-slide-active")').each(function(){
 								if($(this).find('video').length > 0) {
 									if($(this).find('video').get(0).currentTime != 0 ) $(this).find('video').get(0).currentTime = 0;
 								}
-								if($(this).find('.yt-bg-player').length > 0) {
-									$(this).find('.yt-bg-player').getPlayer().seekTo( $(this).find('.yt-bg-player').attr('data-start') );
-								}
 							});
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('video').get(0).play(); }
-							if( $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').length > 0 ) { $('#slider').find('.swiper-slide.swiper-slide-active').find('.yt-bg-player').playYTP(); }
+							if( $('#slider .swiper-slide.swiper-slide-active').find('video').length > 0 ) { $('#slider .swiper-slide.swiper-slide-active').find('video').get(0).play(); }
 
 							$('#slider .swiper-slide.swiper-slide-active [data-caption-animate]').each(function(){
 								var $toAnimateElement = $(this);
@@ -817,6 +788,9 @@
 						e.preventDefault();
 						swiperSlider.swipeNext();
 					});
+
+					$('#slide-number-current').html(swiperSlider.activeIndex + 1);
+					$('#slide-number-total').html(swiperSlider.slides.length);
 				});
 			</script>
 
@@ -828,123 +802,25 @@
 
 			<div class="content-wrap">
 
-				<div class="promo promo-full promo-border header-stick bottommargin-lg">
-					<div class="container clearfix">
-						<h3>Call us today at <span>+91.22.57412541</span> or Email us at <span>support@canvas.com</span></h3>
-						<span>We strive to provide Our Customers with Top Notch Support to make their Theme Experience Wonderful</span>
-						<a href="#" class="button button-reveal button-xlarge button-rounded tright"><i class="icon-angle-right"></i><span>Browse Now</span></a>
-					</div>
-				</div>
-
 				<div class="container clearfix">
 
-					<div class="col_one_third">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-screen i-alt"></i></a>
-							</div>
-							<h3>Responsive Layout</h3>
-							<p>Powerful Layout with Responsive functionality that can be adapted to any screen size. Resize browser to view.</p>
-						</div>
-					</div>
+					<p><span class="dropcap">F</span>oster best practices effectiveness inspire breakthroughs solve immunize turmoil. Policy dialogue peaceful The Elders rural global support. Process inclusive innovate readiness, public sector complexity. Lifting people up cornerstone partner, technology working families civic engagement activist recognize potential global network. Countries tackling solution respond change-makers tackle. Assistance, giving; fight against malnutrition experience in the field lasting change scalable. Empowerment long-term, fairness policy community progress social responsibility; Cesar Chavez recognition. Expanding community ownership visionary indicator pursue these aspirations accessibility. Achieve; worldwide, life-saving initiative facilitate. New approaches, John Lennon humanitarian relief fundraise vaccine Jane Jacobs community health workers Oxfam. Our ambitions informal economies.</p>
 
-					<div class="col_one_third">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-eye i-alt"></i></a>
-							</div>
-							<h3>Retina Ready Graphics</h3>
-							<p>Looks beautiful &amp; ultra-sharp on Retina Screen Displays. Retina Icons, Fonts &amp; all others graphics are optimized.</p>
-						</div>
-					</div>
+					<blockquote class="topmargin bottommargin">
+						<p>Human rights healthcare immunize; advancement grantees. Medical supplies; meaningful, truth technology catalytic effect. Promising development capacity building international enable poverty.</p>
+					</blockquote>
 
-					<div class="col_one_third col_last">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-beaker i-alt"></i></a>
-							</div>
-							<h3>Powerful Performance</h3>
-							<p>Canvas includes tons of optimized code that are completely customizable and deliver unmatched fast performance.</p>
-						</div>
-					</div>
+					<div class="col_half nobottommargin">
 
-					<div class="clear"></div>
-
-					<div class="col_one_third nobottommargin">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-stack i-alt"></i></a>
-							</div>
-							<h3>Premium Sliders Included</h3>
-							<p>Canvas included 20+ custom designed Slider Pages with Premium Sliders like Layer, Revolution, Swiper &amp; others.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third nobottommargin">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-tint i-alt"></i></a>
-							</div>
-							<h3>Unlimited Color Options</h3>
-							<p>Change the color scheme of the Theme in a flash just by changing the 6-digit HEX code in the colors.php file.</p>
-						</div>
-					</div>
-
-					<div class="col_one_third nobottommargin col_last">
-						<div class="feature-box fbox-effect">
-							<div class="fbox-icon">
-								<a href="#"><i class="icon-text-width i-alt"></i></a>
-							</div>
-							<h3>CUSTOMIZABLE FONTS</h3>
-							<p>Use any Font you like from Google Web Fonts, Typekit or other Web Fonts. They will blend in perfectly.</p>
-						</div>
-					</div>
-
-					<div class="clear"></div><div class="line"></div>
-
-					<div id="oc-clients-full" class="owl-carousel image-carousel">
-
-						<a href="#"><img src="images/clients/1.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/2.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/3.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/4.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/5.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/6.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/7.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/8.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/9.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/10.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/11.png" alt="Clients"></a>
-						<a href="#"><img src="images/clients/12.png" alt="Clients"></a>
+						<p>Provide, Aga Khan, interconnectivity governance fairness replicable, new approaches visionary implementation. End hunger evolution, future promising development youth. Public sector, small-scale farmers; harness facilitate gender. Contribution dedicated global change movements, prosperity accelerate progress citizens of change. Elevate; accelerate reduce child mortality; billionaire philanthropy fluctuation, plumpy'nut care opportunity catalyze. Partner deep.</p>
 
 					</div>
 
-					<script type="text/javascript">
+					<div class="col_half nobottommargin col_last">
 
-						jQuery(document).ready(function($) {
+						<p>Frontline harness criteria governance freedom contribution. Campaign Angelina Jolie natural resources, Rockefeller peaceful philanthropy human potential. Justice; outcomes reduce carbon emissions nonviolent resistance human being. Solve innovate aid communities; benefit truth rural development UNICEF meaningful work. Generosity Action Against Hunger relief; many voices impact crisis situation poverty pride. Vaccine carbon.</p>
 
-							var ocClients = $("#oc-clients-full");
-
-							ocClients.owlCarousel({
-								items: 6,
-								margin: 30,
-								loop: true,
-								nav: false,
-								autoplay: true,
-								dots: false,
-								autoplayHoverPause: true,
-								responsive:{
-									0:{ items:2 },
-									480:{ items:3 },
-									768:{ items:4 },
-									992:{ items:5 },
-									1200:{ items:6 }
-								}
-							});
-
-						});
-
-					</script>
+					</div>
 
 				</div>
 
