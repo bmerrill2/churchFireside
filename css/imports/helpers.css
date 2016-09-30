@@ -152,11 +152,11 @@ span.middot {
 }
 
 .bgcolor,
-.bgcolor #header-wrap { background-color: #1ABC9C !important; }
+.bgcolor #header-wrap { background-color: #ED1C2E !important; }
 
-.color { color: #1ABC9C !important; }
+.color { color: #ED1C2E !important; }
 
-.border-color { border-color: #1ABC9C !important; }
+.border-color { border-color: #ED1C2E !important; }
 
 .nobg { background: none !important; }
 

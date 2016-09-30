@@ -813,7 +813,7 @@
 		background-color: transparent !important;
 		font-weight: 600;
 		padding-left: 5px;
-		color: #1ABC9C !important;
+		color: #ED1C2E !important;
 	}
 
 	#primary-menu ul li .mega-menu-content,
@@ -895,10 +895,10 @@
 		background-color: transparent;
 		font-weight: 600;
 		padding: 0 0 0 5px;
-		color: #1ABC9C !important;
+		color: #ED1C2E !important;
 	}
 
-	#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: #1ABC9C !important; }
+	#primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a:hover { color: #ED1C2E !important; }
 
 	#primary-menu ul ul i { line-height: inherit; }
 
@@ -988,7 +988,7 @@
 		left: auto;
 		right: 15px;
 		height: auto;
-		background-color: #1ABC9C;
+		background-color: #ED1C2E;
 		z-index: 11;
 	}
 
@@ -1589,7 +1589,7 @@
 		border-radius: 2px !important;
 	}
 
-	#portfolio-filter li a:hover { color: #1ABC9C; }
+	#portfolio-filter li a:hover { color: #ED1C2E; }
 
 	#portfolio-filter li.activeFilter a {
 		color: #FFF;
