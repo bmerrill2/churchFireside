@@ -1698,7 +1698,7 @@ var SEMICOLON = SEMICOLON || {};
 			SEMICOLON.widget.progress();
 			SEMICOLON.widget.twitterFeed();
 			SEMICOLON.widget.flickrFeed();
-			SEMICOLON.widget.instagramPhotos( '36286274.b9e559e.4824cbc1d0c94c23827dc4a2267a9f6b', 'b9e559ec7c284375bf41e9a9fb72ae01' );
+			SEMICOLON.widget.instagramPhotos( '3287997904.1677ed0.7e16460f55dd4fe1b0058995537ad7db', 'b9e559ec7c284375bf41e9a9fb72ae01' );
 			SEMICOLON.widget.dribbbleShots();
 			SEMICOLON.widget.navTree();
 			SEMICOLON.widget.textRotater();
