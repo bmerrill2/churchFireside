@@ -36,11 +36,11 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>One Page Portfolio with Side Header | Canvas</title>
+	<title>One Page Portfolio | Canvas</title>
 
 </head>
 
-<body class="stretched side-header">
+<body class="stretched">
 
 	<!-- Document Wrapper
 	============================================= -->
@@ -48,7 +48,7 @@
 
 		<!-- Header
 		============================================= -->
-		<header id="header" class="no-sticky">
+		<header id="header" class="full-header static-sticky" data-sticky-class="not-dark" data-sticky-offset="0">
 
 			<div id="header-wrap">
 
@@ -67,7 +67,7 @@
 					============================================= -->
 					<nav id="primary-menu">
 
-						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="0">
+						<ul class="one-page-menu" data-easing="easeInOutExpo" data-speed="1250" data-offset="65">
 							<li><a href="#" data-href="#wrapper"><div>Home</div></a></li>
 							<li><a href="#" data-href="#section-about"><div>About</div></a></li>
 							<li><a href="#" data-href="#section-works"><div>Works</div></a></li>
@@ -77,33 +77,6 @@
 						</ul>
 
 					</nav><!-- #primary-menu end -->
-
-					<div class="clearfix visible-md visible-lg">
-                        <a href="#" class="social-icon si-small si-borderless si-facebook">
-                            <i class="icon-facebook"></i>
-                            <i class="icon-facebook"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-twitter">
-                            <i class="icon-twitter"></i>
-                            <i class="icon-twitter"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-gplus">
-                            <i class="icon-gplus"></i>
-                            <i class="icon-gplus"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-pinterest">
-                            <i class="icon-pinterest"></i>
-                            <i class="icon-pinterest"></i>
-                        </a>
-
-                        <a href="#" class="social-icon si-small si-borderless si-github">
-                            <i class="icon-github"></i>
-                            <i class="icon-github"></i>
-                        </a>
-                    </div>
 
 				</div>
 
@@ -236,6 +209,14 @@
 							}
 						});
 
+						jQuery('#page-menu a').click(function(){
+							jQuery('#page-menu li').removeClass('current');
+							jQuery(this).parent('li').addClass('current');
+							var selector = jQuery(this).attr('data-filter');
+							jQuerycontainer.isotope({ filter: selector });
+							return false;
+						});
+
 						jQuery(window).resize(function() {
 							jQuerycontainer.isotope('layout');
 							SEMICOLON.portfolio.portfolioDescMargin();
@@ -247,7 +228,7 @@
 
 				</script><!-- Portfolio Script End -->
 
-				<div class="section dark notopmargin">
+				<div class="section notopmargin">
 					<div class="container col-padding center clearfix">
 
 						<div class="emphasis-title">
@@ -255,7 +236,7 @@
 							<p class="lead">We specialize in Creating Engaging &amp; Creative Brand Entities for New Startups.</p>
 						</div>
 
-						<a href="#" class="button button-border button-circle button-light">Get Quick Quote</a>
+						<a href="#" class="button button-border button-rounded t500">Get Quick Quote</a>
 
 					</div>
 				</div>

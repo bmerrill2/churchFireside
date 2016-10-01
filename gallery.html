@@ -27,28 +27,9 @@
 	<script type="text/javascript" src="js/plugins.js"></script>
 
 	<!-- Document Title
+
 	============================================= -->
-	<title>Header with Login Modal | Canvas</title>
-
-<style>
-.header-login-trigger {
-	float: right;
-	width: 20px;
-	height: 20px;
-	line-height: 20px;
-	font-size: 20px;
-	text-align: center;
-	margin: 40px 0 40px 10px;
-	color: #222;
-	-webkit-transition: margin .4s ease;
-	-o-transition: margin .4s ease;
-	transition: margin .4s ease;
-}
-
-.header-login-trigger:hover { color: #666; }
-
-#header.sticky-header .header-login-trigger { margin: 20px 0 20px 10px; }
-</style>
+	<title>Clients | Canvas</title>
 
 </head>
 
@@ -597,7 +578,7 @@
 									<li><a href="checkout.html"><div>Checkout</div></a></li>
 								</ul>
 							</li>
-							<li class="mega-menu"><a href="#"><div>Shortcodes</div></a>
+							<li class="current mega-menu"><a href="#"><div>Shortcodes</div></a>
 								<div class="mega-menu-content col-5 clearfix">
 									<ul>
 										<li><a href="animations.html"><div><i class="icon-magic"></i>Animations</div></a></li>
@@ -648,7 +629,51 @@
 							</li>
 						</ul>
 
-						<a href="#modal-login-form" data-lightbox="inline" class="header-login-trigger"><i class="icon-line2-login"></i></a>
+						<!-- Top Cart
+						============================================= -->
+						<div id="top-cart">
+							<a href="#" id="top-cart-trigger"><i class="icon-shopping-cart"></i><span>5</span></a>
+							<div class="top-cart-content">
+								<div class="top-cart-title">
+									<h4>Shopping Cart</h4>
+								</div>
+								<div class="top-cart-items">
+									<div class="top-cart-item clearfix">
+										<div class="top-cart-item-image">
+											<a href="#"><img src="images/shop/small/1.jpg" alt="Blue Round-Neck Tshirt" /></a>
+										</div>
+										<div class="top-cart-item-desc">
+											<a href="#">Blue Round-Neck Tshirt</a>
+											<span class="top-cart-item-price">$19.99</span>
+											<span class="top-cart-item-quantity">x 2</span>
+										</div>
+									</div>
+									<div class="top-cart-item clearfix">
+										<div class="top-cart-item-image">
+											<a href="#"><img src="images/shop/small/6.jpg" alt="Light Blue Denim Dress" /></a>
+										</div>
+										<div class="top-cart-item-desc">
+											<a href="#">Light Blue Denim Dress</a>
+											<span class="top-cart-item-price">$24.99</span>
+											<span class="top-cart-item-quantity">x 3</span>
+										</div>
+									</div>
+								</div>
+								<div class="top-cart-action clearfix">
+									<span class="fleft top-checkout-price">$114.95</span>
+									<button class="button button-3d button-small nomargin fright">View Cart</button>
+								</div>
+							</div>
+						</div><!-- #top-cart end -->
+
+						<!-- Top Search
+						============================================= -->
+						<div id="top-search">
+							<a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+							<form action="search.html" method="get">
+								<input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+							</form>
+						</div><!-- #top-search end -->
 
 					</nav><!-- #primary-menu end -->
 
@@ -663,12 +688,12 @@
 		<section id="page-title">
 
 			<div class="container clearfix">
-				<h1>Header</h1>
-				<span>with Login Modal</span>
+				<h1>Clients</h1>
+				<span>People who make us who we are</span>
 				<ol class="breadcrumb">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Templates</a></li>
-					<li class="active">with Login Modal</li>
+					<li><a href="#">Shortcodes</a></li>
+					<li class="active">Clients</li>
 				</ol>
 			</div>
 
@@ -682,31 +707,193 @@
 
 				<div class="container clearfix">
 
-					<div class="modal1 mfp-hide" id="modal-login-form">
-						<div class="block divcenter col-padding" style="background-color: #FFF; max-width: 400px;">
-							<h4 class="uppercase ls1">Login to your Account</h4>
-							<form action="#" class="nobottommargin clearfix" style="max-width: 300px;">
-								<div class="col_full">
-									<label for="" class="capitalize t600">Username or Email:</label>
-									<input type="email" id="template-op-form-email" name="template-op-form-email" value="" class="sm-form-control" />
-								</div>
-								<div class="col_full">
-									<label for="" class="capitalize t600">Password:</label>
-									<input type="password" id="template-op-form-password" name="template-op-form-password" value="" class="sm-form-control" />
-								</div>
-								<div class="col_full nobottommargin">
-									<div class="row">
-										<div class="col-xs-6">
-											<button type="submit" class="button button-rounded button-small button-dark nomargin" value="submit">Login</button>
-										</div>
-										<div class="col-xs-6">
-											<p class="nobottommargin tright"><small class="t300"><em><a href="#">Forgot Password?</a></em></small></p>
-										</div>
-									</div>
-								</div>
-							</form>
+					<h3>Grid Layouts</h3>
+
+					<ul class="clients-grid grid-6 nobottommargin clearfix">
+						<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/7.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/8.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/9.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/10.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/11.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/12.png" alt="Clients"></a></li>
+					</ul>
+
+					<div class="divider"><i class="icon-circle"></i></div>
+
+					<h4>5 Columns</h4>
+
+					<ul class="clients-grid nobottommargin clearfix">
+						<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/7.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/8.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/9.png" alt="Clients"></a></li>
+						<li class="hidden-xs"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></li>
+					</ul>
+
+					<div class="divider"><i class="icon-circle"></i></div>
+
+					<h4>4 Columns</h4>
+
+					<ul class="clients-grid grid-4 nobottommargin clearfix">
+						<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/7.png" alt="Clients"></a></li>
+						<li><a href="#"><img src="images/clients/8.png" alt="Clients"></a></li>
+						<li class="visible-xs"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></li>
+					</ul>
+
+					<div class="divider"><i class="icon-circle"></i></div>
+
+					<div class="col_three_fifth nobottommargin">
+
+						<div class="fancy-title title-bottom-border">
+							<h4>3 Columns</h4>
 						</div>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo iusto quaerat deleniti natus odit ut autem itaque voluptas eligendi!</p>
+
+						<ul class="clients-grid grid-3 nobottommargin clearfix">
+							<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/5.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/6.png" alt="Clients"></a></li>
+						</ul>
+
 					</div>
+
+					<div class="col_two_fifth nobottommargin col_last">
+
+						<div class="fancy-title title-bottom-border">
+							<h4>2 Columns</h4>
+						</div>
+
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut explicabo iusto quaerat deleniti natus!</p>
+
+						<ul class="clients-grid grid-2 nobottommargin clearfix">
+							<li><a href="#"><img src="images/clients/1.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/2.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/3.png" alt="Clients"></a></li>
+							<li><a href="#"><img src="images/clients/4.png" alt="Clients"></a></li>
+						</ul>
+
+					</div>
+
+					<div class="clear"></div>
+
+					<div class="divider"><i class="icon-circle"></i></div>
+
+					<h3>Carousels</h3>
+
+					<div id="oc-clients" class="owl-carousel image-carousel">
+
+						<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Clients"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Clients"></a></div>
+
+					</div>
+
+					<script type="text/javascript">
+
+						jQuery(document).ready(function($) {
+
+							var ocClients = $("#oc-clients");
+
+							ocClients.owlCarousel({
+								items: 5,
+								margin: 20,
+								nav: false,
+								navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
+								dots: true,
+								navRewind: false,
+								responsive:{
+									0:{ items:2 },
+									480:{ items:3 },
+									768:{ items:4 },
+									1000:{ items:5 },
+									1200:{ items:6 }
+								}
+							});
+
+						});
+
+					</script>
+
+				</div>
+
+				<div class="section footer-stick">
+
+					<h3 class="center">Full Width Carousel</h3>
+
+					<div id="oc-clients-full" class="owl-carousel owl-carousel-full image-carousel">
+
+						<div class="oc-item"><a href="#"><img src="images/clients/1.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/2.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/3.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/4.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/5.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/6.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/7.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/8.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/9.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/10.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/11.png" alt="Brands"></a></div>
+						<div class="oc-item"><a href="#"><img src="images/clients/12.png" alt="Brands"></a></div>
+
+					</div>
+
+					<script type="text/javascript">
+
+						jQuery(document).ready(function($) {
+
+							var ocClientsFull = $("#oc-clients-full");
+
+							ocClientsFull.owlCarousel({
+								items: 5,
+								margin: 30,
+								loop: true,
+								nav: true,
+								navText: ['<i class="icon-angle-left"></i>','<i class="icon-angle-right"></i>'],
+								autoplay: true,
+								autoplayHoverPause: false,
+								dots: false,
+								navRewind: false,
+								responsive:{
+									0:{ items:2 },
+									480:{ items:3 },
+									768:{ items:4 },
+									992:{ items:5 },
+									1200:{ items:7 },
+									1400:{ items:8 }
+								}
+							});
+
+						});
+
+					</script>
 
 				</div>
 
