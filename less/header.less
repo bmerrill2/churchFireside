@@ -25,7 +25,7 @@
 		z-index: 199;
 	}
 
-	&.full-header {
+	&.semi-transparent {
 		background-color: rgba(255,255,255,0.8);
 	}
 
@@ -74,19 +74,19 @@
 		padding-top: @header-height;
 	}
 
-	&.full-header {
+	&.semi-transparent {
 		border-bottom-color: #EEE;
 	}
 }
 
-body.stretched #header.full-header .container {
+body.stretched #header.semi-transparent .container {
 	width: 100%;
 	padding: 0 30px;
 }
 
-#header.transparent-header.full-header #header-wrap { border-bottom: 1px solid rgba(0,0,0,0.1); }
+#header.transparent-header.semi-transparent #header-wrap { border-bottom: 1px solid rgba(0,0,0,0.1); }
 
-#slider + #header.transparent-header.full-header #header-wrap {
+#slider + #header.transparent-header.semi-transparent #header-wrap {
 	border-top: 1px solid rgba(0,0,0,0.1);
 	border-bottom: none;
 }
@@ -124,13 +124,13 @@ body.stretched #header.full-header .container {
 	}
 }
 
-#header.full-header #logo {
+#header.semi-transparent #logo {
 	padding-right: 30px;
 	margin-right: 30px;
 	border-right: 1px solid #EEE;
 }
 
-#header.transparent-header.full-header #logo { border-right-color: rgba(0,0,0,0.1); }
+#header.transparent-header.semi-transparent #logo { border-right-color: rgba(0,0,0,0.1); }
 
 
 /* ----------------------------------------------------------------
@@ -184,14 +184,14 @@ body.stretched #header.full-header .container {
 	height: @header-height;
 }
 
-#header.full-header #primary-menu > ul {
+#header.semi-transparent #primary-menu > ul {
 	float: left;
 	padding-right: 15px;
 	margin-right: 15px;
 	border-right: 1px solid #EEE;
 }
 
-#header.transparent-header.full-header #primary-menu > ul { border-right-color: rgba(0,0,0,0.1); }
+#header.transparent-header.semi-transparent #primary-menu > ul { border-right-color: rgba(0,0,0,0.1); }
 
 #primary-menu-trigger,
 #page-submenu-trigger {
@@ -375,7 +375,7 @@ body.stretched #header.full-header .container {
 
 body.stretched .container-fullwidth #primary-menu ul li.mega-menu .mega-menu-content { margin: 0 60px; }
 
-body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-content { margin: 0 30px; }
+body.stretched #header.semi-transparent #primary-menu ul li.mega-menu .mega-menu-content { margin: 0 30px; }
 
 #primary-menu ul li.mega-menu .mega-menu-content.style-2 { padding: 0 10px; }
 
@@ -746,7 +746,7 @@ body:not(.device-sm):not(.device-xs):not(.device-xxs) #primary-menu.style-2.cent
 			margin-top: -10px;
 		}
 
-		.full-header {
+		.semi-transparent {
 			#primary-menu-trigger {
 				right: 90px;
 			}
@@ -949,13 +949,13 @@ body.top-search-open #top-search form {
 	}
 }
 
-body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.full-header #top-search form input { padding-left: 40px; }
+body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.semi-transparent #top-search form input { padding-left: 40px; }
 
 body:not(.device-sm):not(.device-xs):not(.device-xxs) .container-fullwidth #top-search form input { padding-left: 60px; }
 
 body.top-search-open #top-search form input { pointer-events: auto; }
 
-body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header:not(.sticky-header):not(.full-header):not(.floating-header) #top-search form input { border-bottom: 2px solid rgba(0,0,0,0.1); }
+body:not(.device-sm):not(.device-xs):not(.device-xxs) #header.transparent-header:not(.sticky-header):not(.semi-transparent):not(.floating-header) #top-search form input { border-bottom: 2px solid rgba(0,0,0,0.1); }
 
 #top-search form input::-moz-placeholder {
 	color: #555;
@@ -1206,7 +1206,7 @@ body.top-search-open {
 	}
 }
 
-#header.sticky-header.full-header { background-color: transparent; }
+#header.sticky-header.semi-transparent { background-color: transparent; }
 
 #header-wrap { position: relative; }
 
@@ -1221,7 +1221,7 @@ body.top-search-open {
 	-webkit-backface-visibility: hidden;
 }
 
-#header.full-header.sticky-header #header-wrap { background-color: rgba(255,255,255,0.8) }
+#header.semi-transparent.sticky-header #header-wrap { background-color: rgba(255,255,255,0.8) }
 
 #header.sticky-header:not(.static-sticky),
 #header.sticky-header:not(.static-sticky) #header-wrap,

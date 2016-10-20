@@ -27,12 +27,12 @@
 	transition: height .4s ease, background-color .4s ease, opacity .3s ease;
 }
 
-#header.full-header:not(.border-full-header):not(.sticky-header) #header-wrap { border-bottom: 0; }
+#header.semi-transparent:not(.border-semi-transparent):not(.sticky-header) #header-wrap { border-bottom: 0; }
 
-#header.full-header.border-full-header #header-wrap { border-bottom-color: rgba(0,0,0,0.05) !important; }
+#header.semi-transparent.border-semi-transparent #header-wrap { border-bottom-color: rgba(0,0,0,0.05) !important; }
 
-.dark #header.full-header.border-full-header #header-wrap,
-#header.dark.full-header.border-full-header #header-wrap { border-bottom-color: rgba(255,255,255,0.15) !important; }
+.dark #header.semi-transparent.border-semi-transparent #header-wrap,
+#header.dark.semi-transparent.border-semi-transparent #header-wrap { border-bottom-color: rgba(255,255,255,0.15) !important; }
 
 #header.transparent-header:not(.sticky-header) #header-wrap { background-color: transparent; }
 
@@ -44,9 +44,9 @@
 	margin-bottom: -70px;
 }
 
-#header.full-header #logo { border-right: 0; }
+#header.semi-transparent #logo { border-right: 0; }
 
-#header.full-header #primary-menu > ul {
+#header.semi-transparent #primary-menu > ul {
 	padding-right: 0;
 	margin-right: 0;
 	border-right: 0;
@@ -81,7 +81,7 @@
 ---------------------------------------------------------------------------- */
 
 #header.sticky-header #header-wrap,
-#header.full-header.border-full-header.sticky-header #header-wrap {
+#header.semi-transparent.border-semi-transparent.sticky-header #header-wrap {
 	box-shadow: none;
 	border-bottom: 1px solid #F5F5F5 !important;
 	-webkit-backface-visibility: hidden;
@@ -660,9 +660,9 @@ textarea.border-form-control {
 	}
 
 	.dark #header.transparent-header #header-wrap,
-	.dark #header.full-header #header-wrap,
+	.dark #header.semi-transparent #header-wrap,
 	#header.dark.transparent-header #header-wrap,
-	#header.dark.full-header #header-wrap {
+	#header.dark.semi-transparent #header-wrap {
 		background-color: #333;
 		border-bottom-color: rgba(255,255,255,0.1);
 	}
