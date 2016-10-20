@@ -660,9 +660,9 @@ textarea.border-form-control {
 	}
 
 	.dark #header.transparent-header #header-wrap,
-	.dark #header.semi-transparent #header-wrap,
+	.dark #header.full-header #header-wrap,
 	#header.dark.transparent-header #header-wrap,
-	#header.dark.semi-transparent #header-wrap {
+	#header.dark.full-header #header-wrap {
 		background-color: #333;
 		border-bottom-color: rgba(255,255,255,0.1);
 	}

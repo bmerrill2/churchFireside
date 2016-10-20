@@ -109,20 +109,20 @@ body #side-panel.dark { background-color: #383838; }
 .dark #slider + #header.transparent-header.full-header:not(.sticky-header) #header-wrap:not(.not-dark),
 #slider + #header.transparent-header.full-header.dark:not(.sticky-header) #header-wrap:not(.not-dark) { border-top-color: rgba(255,255,255,0.2); }
 
-.dark #header.semi-transparent,
-.dark #header.semi-transparent.floating-header .container,
-#header.dark.semi-transparent,
-#header.dark.semi-transparent.floating-header .container { background-color: rgba(0,0,0,0.6); }
+.dark #header.full-header,
+.dark #header.full-header.floating-header .container,
+#header.dark.full-header,
+#header.dark.full-header.floating-header .container { background-color: rgba(0,0,0,0.6); }
 
-.dark #header.sticky-header.semi-transparent,
-.dark #header.semi-transparent.floating-header,
-.dark #header.semi-transparent.floating-header.sticky-header .container,
-#header.dark.sticky-header.semi-transparent,
-#header.dark.semi-transparent.floating-header,
-#header.dark.semi-transparent.floating-header.sticky-header .container { background-color: transparent; }
+.dark #header.sticky-header.full-header,
+.dark #header.full-header.floating-header,
+.dark #header.full-header.floating-header.sticky-header .container,
+#header.dark.sticky-header.full-header,
+#header.dark.full-header.floating-header,
+#header.dark.full-header.floating-header.sticky-header .container { background-color: transparent; }
 
-.dark #header.semi-transparent.sticky-header #header-wrap,
-#header.dark.semi-transparent.sticky-header #header-wrap { background-color: rgba(0,0,0,0.6); }
+.dark #header.full-header.sticky-header #header-wrap,
+#header.dark.full-header.sticky-header #header-wrap { background-color: rgba(0,0,0,0.6); }
 
 .dark #logo a { color: #CCC; }
 
@@ -1682,9 +1682,9 @@ body #side-panel.dark #side-panel-trigger-close a {
 	.dark .sidebar { border-bottom-color: rgba(255,255,255,0.1); }
 
 	.dark #header.transparent-header,
-	.dark #header.semi-transparent,
+	.dark #header.full-header,
 	#header.dark.transparent-header,
-	#header.dark.semi-transparent {
+	#header.dark.full-header {
 		background-color: #333;
 		border-bottom-color: rgba(255,255,255,0.1);
 	}

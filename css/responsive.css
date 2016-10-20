@@ -580,14 +580,14 @@
 	#header.sticky-header #header-wrap { position: relative; }
 
 	#header.transparent-header,
-	#header.semi-transparent {
+	#header.full-header {
 		background: #FFF;
 		border-bottom: 1px solid #F5F5F5;
 		z-index: auto;
 	}
 
 	#header.dark.transparent-header,
-	#header.dark.semi-transparent {
+	#header.dark.full-header {
 		background-color: #333;
 		border-bottom: 1px solid rgba(0,0,0,0.1);
 	}
