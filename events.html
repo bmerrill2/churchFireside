@@ -35,7 +35,7 @@
 
 	<!-- Document Title
 	============================================= -->
-	<title>One Page Portfolio | Canvas</title>
+	<title>Events</title>
 
 </head>
 
@@ -83,218 +83,54 @@
 
 			</div>
 
-		</header>
+		</header><!-- #header end -->
+
+		<section id="slider" style="background: url(images/events/customers.jpg) center; overflow: visible;" data-height-lg="500" data-height-md="500" data-height-sm="600" data-height-xs="600" data-height-xxs="600">
+			<div class="container clearfix">
+
+				<form action="#" method="post" role="form" class="landing-wide-form landing-form-overlay dark nobottommargin clearfix">
+					<div class="heading-block nobottommargin nobottomborder">
+						<h2>Book Now</h2>
+						<span>Signup below to have us at your next event</span>
+					</div>
+					<div class="col_full">
+						<input type="text" class="form-control input-lg not-dark" value="" placeholder="Name*">
+					</div>
+                    <div class="col_full">
+						<input type="text" class="form-control input-lg not-dark" value="" placeholder="Company">
+                    </div>
+					<div class="col_full">
+						<input type="email" class="form-control input-lg not-dark" value="" placeholder="Email*">
+					</div>
+					<div class="col_full">
+						<input type="phone" class="form-control input-lg not-dark" value="" placeholder="Phone*">
+					</div>
+					<div class="col_full">
+						<input type="date" class="form-control input-lg not-dark" value="" placeholder="Event Date*">
+					</div>
+                    <div class="col_full">
+						<input type="text" class="form-control input-lg not-dark" value="" placeholder="About Event*">
+					</div>
+					<div class="col_full nobottommargin">
+						<button class="btn btn-lg btn-info btn-block nomargin" value="submit" type="submit" style="">Book Now</button>
+					</div>
+				</form>
+
+			</div>
+		</section>
 
 		<!-- Content
 		============================================= -->
-		<section id="content">
+		<section id="content" style="overflow: invisible;">
 
-			<div class="content-wrap nopadding">
+			<div class="content-wrap" style="background-color: #333333;">
 
-				<!-- Portfolio Items
-				============================================= -->
-				<div id="portfolio" class="portfolio-nomargin portfolio-full portfolio-masonry mixed-masonry clearfix">
-
-					<article class="portfolio-item pf-media pf-icons wide">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/1.jpg" alt="Open Imagination">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Open Imagination</a></h3>
-									<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-illustrations">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/2.jpg" alt="Locked Steel Gate">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Locked Steel Gate</a></h3>
-									<span><a href="#">Illustrations</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-graphics pf-uielements">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/3.jpg" alt="Mac Sunglasses">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Mac Sunglasses</a></h3>
-									<span><a href="#">Graphics</a>, <a href="#">UI Elements</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-media pf-icons wide">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/4.jpg" alt="Open Imagination">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Open Imagination</a></h3>
-									<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-uielements pf-media wide">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/5.jpg" alt="Console Activity">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Console Activity</a></h3>
-									<span><a href="#">UI Elements</a>, <a href="#">Media</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-media pf-icons">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/6.jpg" alt="Open Imagination">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Open Imagination</a></h3>
-									<span><a href="#">Media</a>, <a href="#">Icons</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-					<article class="portfolio-item pf-uielements pf-icons">
-						<div class="portfolio-image">
-							<a href="#">
-								<img src="images/portfolio/mixed/7.jpg" alt="Backpack Contents">
-							</a>
-							<div class="portfolio-overlay">
-								<div class="portfolio-desc">
-									<h3><a href="#">Backpack Contents</a></h3>
-									<span><a href="#">UI Elements</a>, <a href="#">Icons</a></span>
-								</div>
-							</div>
-						</div>
-					</article>
-
-				</div><!-- #portfolio end -->
-
-				<!-- Portfolio Script
-				============================================= -->
-				<script type="text/javascript">
-
-					jQuery(window).load(function(){
-
-						var jQuerycontainer = jQuery('#portfolio');
-
-						jQuerycontainer.isotope({
-							transitionDuration: '0.65s',
-							masonry: {
-								columnWidth: jQuerycontainer.find('.portfolio-item:not(.wide)')[0]
-							}
-						});
-
-						jQuery('#page-menu a').click(function(){
-							jQuery('#page-menu li').removeClass('current');
-							jQuery(this).parent('li').addClass('current');
-							var selector = jQuery(this).attr('data-filter');
-							jQuerycontainer.isotope({ filter: selector });
-							return false;
-						});
-
-						jQuery(window).resize(function() {
-							jQuerycontainer.isotope('layout');
-							SEMICOLON.portfolio.portfolioDescMargin();
-						});
-
-						var t = setTimeout(function(){ SEMICOLON.portfolio.portfolioDescMargin(); }, 200);
-
-					});
-
-				</script><!-- Portfolio Script End -->
-
-				<div class="section notopmargin">
-					<div class="container col-padding center clearfix">
-
-						<div class="emphasis-title">
-							<h2 class="font-body t700" style="font-size: 54px;">We are a Creative Media &amp; Design Agency.</h2>
-							<p class="lead">We specialize in Creating Engaging &amp; Creative Brand Entities for New Startups.</p>
-						</div>
-
-						<a href="#" class="button button-border button-rounded t500">Get Quick Quote</a>
-
+				<div class="promo promo-dark promo-full landing-promo header-stick">
+					<div class="container clearfix">
+						<h3>Let us make your next event great <i class="icon-circle-arrow-right" style="position:relative;top:2px;"></i></h3>
+                      <span>We do fundraisers, corporate events, birthdays, weddings and festivals.</span>
+                      <span>Whatever the event, we have got you covered. Contact us now to get started</span>
 					</div>
-				</div>
-
-				<div class="container topmargin-lg bottommargin-lg clearfix">
-
-					<div class="row common-height grid-border clearfix">
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-mobile"></i></a>
-								</div>
-								<h3>Responsive Framework</h3>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-presentation"></i></a>
-								</div>
-								<h3>Beautifully Presented</h3>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-puzzle"></i></a>
-								</div>
-								<h3>Extensively Extendable</h3>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-gears"></i></a>
-								</div>
-								<h3>Powerfully Customizable</h3>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-genius"></i></a>
-								</div>
-								<h3>Geniusly Transformable</h3>
-							</div>
-						</div>
-						<div class="col-md-4 col-sm-6 col-padding">
-							<div class="feature-box fbox-center fbox-dark fbox-plain fbox-small nobottomborder">
-								<div class="fbox-icon">
-									<a href="#"><i class="icon-et-hotairballoon"></i></a>
-								</div>
-								<h3>Industrial Support</h3>
-							</div>
-						</div>
-					</div>
-
 				</div>
 
 			</div>
