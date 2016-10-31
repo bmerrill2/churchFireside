@@ -10712,6 +10712,7 @@ form .col_five_sixth { margin-bottom: 25px; }
 	float: right;
 	width: 380px;
 	margin: 0;
+    margin-right: 100px;
 }
 
 label.error {
@@ -13233,3 +13234,6 @@ body:not(.no-transition) #wrapper,
 	padding:0!important
 }
 
+#boxSize {
+  height: 40px;
+}
